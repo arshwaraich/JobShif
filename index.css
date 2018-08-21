@@ -1,0 +1,146 @@
+body {
+    background-color: #ffffff;
+    padding: 0vw;
+    margin: 0vw 10vw;
+}
+
+#header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #f0f0f0;
+}
+
+#header_text {
+    width: 100%;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    font-size: 6vh;
+    text-align: center;
+}
+
+div #navBar {
+    width: 79vh;
+    height: 5vh;
+    margin: 20px calc(50% - 39.5vh) 15px;
+}
+
+div.navBarbutt {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4vh;
+    color: #000000;
+    margin: 0vh 1.9vh;
+    width: 12vh;
+    text-align: center;
+}
+
+div a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 2.4vh;
+    transition: 0.3s;
+}
+
+div a:hover {
+    text-decoration: none;
+    background-color: #f0f0f0;
+}
+
+div a:visited {
+    color: #555555;
+}
+
+#bod {
+    width: calc(60vw + 1px);
+    height: 60vh;
+    background-color: #f9f9f9;
+    margin: 10vh 10vw 0%;
+}
+
+#timHrs {
+    float: left;
+    width: 30vw;
+    margin: 0%;
+    height: 60vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 40vh;
+    line-height: 60vh;
+    text-align: center;
+    color: #686868;
+    transition: 0.5s;
+    border: none;
+}
+
+#timHrs:hover {
+    color: #f9f9f9;
+    background-color: #686868;
+}
+
+#form {
+    float: right;
+    width: calc(30vw - 50px);
+    margin: 0%;
+    height: calc(60vh - 60px);
+    padding: 30px 25px;
+    border-left-style: solid;
+    border-left-color: #979797;
+    border-left-width: 1px;
+}
+
+div #formHead {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 3.2vh;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+#formBod {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.8vh;
+    color: #000000;
+}
+
+label {
+    width: 20%;
+    float: left;
+    text-align: right;
+    margin: 20px;
+    line-height: 30px;
+}
+
+input[type=text], input[type=number]{
+    margin: 10px;
+    width: 50%;
+    padding: 10px;
+    line-height: 30px;
+    border: none;
+}
+
+input[type=submit], input[type=reset]{
+    width: 22%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    border: none;
+    transition: 0.3s;
+}
+
+input[type=submit] {
+    float: left;
+    margin: 5% 5% 0% 22%;
+}
+
+input[type=reset] {
+    margin: 5% 22% 0% 5%;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+    background-color: #5d5d5d;
+    color: #ffffff;
+}

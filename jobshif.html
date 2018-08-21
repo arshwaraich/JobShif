@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet"> 
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="header_text">
+                JobShif
+            </div>
+            <div id="navBar">
+                <div class="navBarbutt"><a href="">All</a></div>
+                <div class="navBarbutt"><a href="">Week</a></div>
+                <div class="navBarbutt"><a href="">Month</a></div>
+                <div class="navBarbutt"><a href="">Due</a></div>
+                <div class="navBarbutt"><a href="">Moneh</a></div>
+            </div>
+        </div>
+        
+        <div id="bod">
+            <div id="timHrs">
+            0
+            </div>
+            <div id="form">
+                <form id="data" action="http://localhost:8080/" method="GET">
+                    <div id="formHead">Shift Det.</div>
+                    <label for="timFrom">
+                        <span id="formBod">From :</span>
+                    </label>
+                    <input name="timFrom" type="text" id="timFrom" autofocus required>
+                    <label for="timTo">
+                            <span id="formBod">To :</span>
+                    </label>
+                    <input name="timTo" type="text" id="timTo" required>
+                    <label for="Moneh">
+                            <span id="formBod">Pay/Hr :</span>
+                    </label>
+                    <input name="Moneh" type="number" id="Moneh" value="10">
+    
+                    <input type="submit" value="Save" id="Sub">
+                    <input type="reset" value="Delete" id="Del">
+
+                </form>
+            </div>
+        </div>        
+    </body>
+</html>
