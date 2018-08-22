@@ -25,16 +25,20 @@
             0
             </div>
             <div id="form">
-                <form id="data" action="http://localhost:8080/" method="GET">
+                <form id="data" action="http://localhost:8080/Jobshif" method="GET">
                     <div id="formHead">Shift Det.</div>
                     <label for="timFrom">
                         <span id="formBod">From :</span>
                     </label>
-                    <input name="timFrom" type="text" id="timFrom" autofocus required>
+                    <input name="timFrom" type="text" id="timFrom" onchange="timefrom()" autofocus required>
                     <label for="timTo">
-                            <span id="formBod">To :</span>
+                        <span id="formBod">To :</span>
                     </label>
-                    <input name="timTo" type="text" id="timTo" required>
+                    <input name="timTo" type="text" id="timTo" onchange="timeto()" required>
+                    <label for="dt">
+                        <span id="formBod">Date :</span>
+                    </label>
+                    <input name="dt" type="date" id="dt" required>
                     <label for="Moneh">
                             <span id="formBod">Pay/Hr :</span>
                     </label>
