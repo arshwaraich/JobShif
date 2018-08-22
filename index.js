@@ -31,23 +31,22 @@ function setTimHrs(val)
 function timefrom()
 {
     var beg = document.getElementById("timFrom");
-    beg.value = timeParse(beg.value);
-    if(timeEnd != 0)
-        setTimHrs( timeEnd > timeBeg ? (timeEnd/100 - timeBeg/100) : 24 - (timeBeg/100 - timeEnd/100));
+    timeBeg = timeParse(beg.value);
+    beg.value = (timeBeg.hour < 10 ? '0' : '') + timeBeg.hour + ':' + (timeBeg.minute < 10 ? '0' : '') + timeBeg.minute;
 
-    //console.log(beg.value);
-    timeBeg = parseInt(beg.value);
+    if(timeEnd != 0)
+        setTimHrs(timeEnd.hour > timeBeg.hour ? (timeEnd.hour - timeBeg.hour) : 24 - (timeBeg.hour - timeEnd.hour));
+
 }
 
 function timeto()
 {
     var end = document.getElementById("timTo");
-    end.value = timeParse(end.value);
-    
+    timeEnd = timeParse(end.value);
+    end.value = (timeEnd.hour < 10 ? '0' : '') + timeEnd.hour + ':' + (timeEnd.minute < 10 ? '0' : '') +timeEnd.minute;
+
     if(timeBeg != 0)
-        setTimHrs( timeEnd > timeBeg ? (timeEnd/100 - timeBeg/100) : 24 - (timeBeg/100 - timeEnd/100));
-    
-    timeEnd = parseInt(end.value);    
+        setTimHrs(timeEnd.hour > timeBeg.hour ? (timeEnd.hour - timeBeg.hour) : 24 - (timeBeg.hour - timeEnd.hour));
 }
 
 function timeParse(txt)
@@ -56,8 +55,9 @@ function timeParse(txt)
     var pm = false;
     if(txt.length != 0)
     {
+        retRegEx = /(^\d{1,2})\D?(\d{0,2})/;
         pm = (txt.search(/pm/i) != -1);
-        ret = milTime(txt.replace(/(^\d{1,2})\D?(\d{0,2})/, '$1:$2'), pm);
+        ret = milTime(retRegEx.exec(txt), pm);
     }
 
     return ret;
@@ -65,23 +65,14 @@ function timeParse(txt)
 
 function milTime(tm, meridian)
 {
-    var hourRegEx = /(^\d{1,2}):/;
-    var hours = parseInt(hourRegEx.exec(tm));
+    var time = {"hour": 0, "minute": 0};
+    if (tm[1] != '')
+        time.hour = parseInt(tm[1]);
     
-    var minuteRegEx = /:(\d{1,})/; 
-    var minutes = '00';
-    if (tm.search(minuteRegEx) != -1)
-        minutes = minuteRegEx.exec(tm);
+    if (tm[2] != '')
+        minutes = parseInt(tm[2]);
     
-    if(meridian && hours < 12) hours = String(12 + hours);
-    if (hours.length == 1)
-        hours = '0' + hours;
-    else if(hours.length == 0)
-        hours = '00';
-    if (minutes.length == 1)
-        minutes = '0' + minutes;
-    else if(minutes.length == 0)
-        minutes = '00';
-
-    return String(hours) + String(minutes);
+    if(meridian && time.hour < 12) time.hour += 12;
+    
+    return time;
 }
