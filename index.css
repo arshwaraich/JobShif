@@ -54,7 +54,7 @@ div a:visited {
 }
 
 #bod {
-    width: calc(60vw + 1px);
+    width: calc(75% + 1px);
     height: 60vh;
     background-color: #f9f9f9;
     margin: 10vh 10vw 0%;
@@ -62,7 +62,7 @@ div a:visited {
 
 #timHrs {
     float: left;
-    width: 30vw;
+    width: calc(50% - 0.5px);
     margin: 0%;
     height: 60vh;
     font-family: 'Roboto', sans-serif;
@@ -82,13 +82,14 @@ div a:visited {
 
 #form {
     float: right;
-    width: calc(30vw - 50px);
+    width: calc(50% - 50.5px);
     margin: 0%;
     height: calc(60vh - 60px);
     padding: 30px 25px;
     border-left-style: solid;
     border-left-color: #979797;
     border-left-width: 1px;
+    overflow-y: auto;
 }
 
 div #formHead {
@@ -108,15 +109,18 @@ div #formHead {
 
 label {
     width: 20%;
+    height: 30px;
     float: left;
     text-align: right;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
     line-height: 30px;
 }
 
 input[type=text], input[type=number], input[type=date]{
     margin: 10px;
     width: 50%;
+    height: 30px;
     padding: 10px;
     line-height: 30px;
     border: none;
@@ -133,11 +137,11 @@ input[type=submit], input[type=reset]{
 
 input[type=submit] {
     float: left;
-    margin: 5% 5% 0% 22%;
+    margin: 5% 5% 5% 22%;
 }
 
 input[type=reset] {
-    margin: 5% 22% 0% 5%;
+    margin: 5% 22% 5% 5%;
 }
 
 input[type=submit]:hover, input[type=reset]:hover{
