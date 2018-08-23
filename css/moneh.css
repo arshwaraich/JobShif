@@ -1,0 +1,19 @@
+#money {
+    width: calc(75%);
+    height: 60vh;
+    background-color: #f9f9f9;
+    margin: 10vh 10vw 0%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 40vh;
+    line-height: 60vh;
+    text-align: center;
+    color: #686868;
+    transition: 0.5s;
+    border: none;
+}
+
+#money:hover {
+    color: #f9f9f9;
+    background-color: #686868;
+}
