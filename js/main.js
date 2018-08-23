@@ -1,18 +1,6 @@
 var timeBeg = 0;
 var timeEnd = 0;
 
-window.onload = function()
-{
-    var bd = this.document.getElementsByTagName("body")[0];
-    
-    if(this.screen.width < 1250)
-    {
-        bd.style.margin = "0vw";
-        if(this.screen.width < 1000)
-            bd.style.minWidth = "1000px";
-    }
-}
-
 function setTimHrs(val)
 {
     var numDef = document.getElementById("timHrs");
