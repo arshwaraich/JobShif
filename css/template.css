@@ -42,6 +42,7 @@ div.navBarbutt>a {
     padding: 10px;
     border-radius: 2.4vh;
     transition: 0.3s;
+    color: #555555;
 }
 
 div.navBarbutt>a:hover {

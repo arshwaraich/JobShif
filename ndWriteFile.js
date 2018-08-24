@@ -8,13 +8,13 @@ http.createServer(function (req,res)
     var dataJSONobj = { "name" : "Job shift records",
                         "record" : []};
     var data_ = url.parse(req.url, true);
-    
+    console.log(data_);
     fs.readFile('./JSONdata/data.json', function(err, data) 
     {
         if(err)
             throw err;
     
-        if (data_.timFrom !== undefined)
+        if (data_.search.search('timFrom') != -1)
         {
            if(data != '')
             {
