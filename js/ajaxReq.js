@@ -7,6 +7,7 @@ var httpRequest;
 
 window.onload = function()
 {
+	console.log('Program me daddy *UWU*');
 	makeRequest('objReq');
 }
 
